@@ -18,10 +18,10 @@
         });
 
     	it('with valid town code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?town=78613')
+    		rqst(app).get('/api/v1/getWeather?q=Hamilton')
     		.end(function(err, res) {
                     assert.equal(res.status, 2000);
-                    assert.equal(res.body.city, 'Anderson Mill');
+                    assert.equal(res.body.city, 'Hamilton');
                     done();
                 });
     	});
@@ -35,7 +35,7 @@
     	});
 
     	it('with invalid town code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?town=00000')
+    		rqst(app).get('/api/v1/getWeather?q=00000')
     		.end(function(err, res) {
                     assert.equal(res.status, 400);
                     done();
@@ -43,7 +43,7 @@
     	});
 
     	it('with incomplete town code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?town=786')
+    		rqst(app).get('/api/v1/getWeather?q=786')
     		.end(function(err, res) {
                     assert.equal(res.status, 400);
                     done();
