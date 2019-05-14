@@ -64,7 +64,7 @@
     it("Enter town code and check output - 1", function(done) {
       driver.findElement(webdriver.By.id('town1')).sendKeys('Hamilton');
       driver.findElement(webdriver.By.id('town1city')).getText().then(function(text) {
-        assert.equal(text, ' Anderson Mill');
+        assert.equal(text, ' Hamilton');
         done();
       });
     });
@@ -72,7 +72,7 @@
     it("Enter town code and check output - 2", function(done) {
       driver.findElement(webdriver.By.id('town4')).sendKeys('Ohaupo');
       driver.findElement(webdriver.By.id('town4city')).getText().then(function(text) {
-        assert.equal(text, ' Irving');
+        assert.equal(text, ' Ohaupo');
         done();
       });
     });
