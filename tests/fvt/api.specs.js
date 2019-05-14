@@ -22,7 +22,7 @@
         }
         request({
       		method: 'GET',
-              url: 'http://api.openweathermap.org/data/2.5/weather?appid=6b7b471967dd0851d0010cdecf28f829&units=metric&q=Hamilton,nz'
+              url: appUrl + '/api/v1/getWeather?town=Hamilton'
           }, function(err, resp, body) {
           	if(err) {
           		assert.fail('Failed to get the response');
@@ -60,7 +60,7 @@
         }
         request({
       		method: 'GET',
-              url: 'http://api.openweathermap.org/data/2.5/weather?appid=6b7b471967dd0851d0010cdecf28f829&units=metric&q=Auckland,nz'
+              url: appUrl + '/api/v1/getWeather?town=Auckland'
           }, function(err, resp, body) {
           	if(err) {
           		assert.fail('Failed to get the response');
