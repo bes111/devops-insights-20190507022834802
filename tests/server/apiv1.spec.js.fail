@@ -17,8 +17,8 @@
             app.use('/api/v1/', apiv1.router);
         });
 
-    	it('with valid zip code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?zip=78613')
+    	it('with valid town code', function(done) {
+    		rqst(app).get('/api/v1/getWeather?town=78613')
     		.end(function(err, res) {
                     assert.equal(res.status, 2000);
                     assert.equal(res.body.city, 'Anderson Mill');
@@ -26,7 +26,7 @@
                 });
     	});
 
-    	it('with without zip code', function(done) {
+    	it('with without town code', function(done) {
     		rqst(app).get('/api/v1/getWeather')
     		.end(function(err, res) {
                     assert.equal(res.status, 4000);
@@ -34,16 +34,16 @@
                 });
     	});
 
-    	it('with invalid zip code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?zip=00000')
+    	it('with invalid town code', function(done) {
+    		rqst(app).get('/api/v1/getWeather?town=00000')
     		.end(function(err, res) {
                     assert.equal(res.status, 400);
                     done();
                 });
     	});
 
-    	it('with incomplete zip code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?zip=786')
+    	it('with incomplete town code', function(done) {
+    		rqst(app).get('/api/v1/getWeather?town=786')
     		.end(function(err, res) {
                     assert.equal(res.status, 400);
                     done();

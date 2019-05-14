@@ -47,8 +47,8 @@
       });
     });
 
-    it("Check for zip4 element", function(done) {
-      driver.isElementPresent(webdriver.By.id('zip4')).then(function(present) {
+    it("Check for town4 element", function(done) {
+      driver.isElementPresent(webdriver.By.id('town4')).then(function(present) {
         assert.equal(present, true);
         done();
       });
@@ -61,17 +61,17 @@
       });
     });
 
-    it("Enter zip code and check output - 1", function(done) {
-      driver.findElement(webdriver.By.id('zip1')).sendKeys('78613');
-      driver.findElement(webdriver.By.id('zip1city')).getText().then(function(text) {
+    it("Enter town code and check output - 1", function(done) {
+      driver.findElement(webdriver.By.id('town1')).sendKeys('78613');
+      driver.findElement(webdriver.By.id('town1city')).getText().then(function(text) {
         assert.equal(text, ' Anderson Mill');
         done();
       });
     });
 
-    it("Enter zip code and check output - 2", function(done) {
-      driver.findElement(webdriver.By.id('zip4')).sendKeys('75038');
-      driver.findElement(webdriver.By.id('zip4city')).getText().then(function(text) {
+    it("Enter town code and check output - 2", function(done) {
+      driver.findElement(webdriver.By.id('town4')).sendKeys('75038');
+      driver.findElement(webdriver.By.id('town4city')).getText().then(function(text) {
         assert.equal(text, ' Irving');
         done();
       });

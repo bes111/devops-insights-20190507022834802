@@ -1,0 +1,39 @@
+<div>
+    <div class="underline" style="float:left">Current Weather</div>
+    <div style="float:left; width:100%; padding-left:15px">
+      <div style="float:left; width:100%">
+      	<div id="towncode" class="headerText" style="width:10em">town Code</div>
+      	<div id="location" class="headerText" style="width:10em">Location</div>
+      	<div id="weather" class="headerText">Weather</div>
+      </div>
+
+      <div style="float:left; width:100%">
+      	<div class="headerText" style="width:10em">
+      		<span><input id="town1" type="text" ng-model="town1m" ng-change="town(1)"></span>
+      	</div>
+      	<div id="town1city" class="underline" style="width:10em">&nbsp;{{town1City}}</div>
+      	<div id="town1weather" class="underline">&nbsp;{{town1Weather}}</div>
+      </div>
+      <div style="float:left; width:100%">
+      	<div class="headerText" style="width:10em">
+      		<span><input id="town2" type="text" ng-model="town2m" ng-change="town(2)"></span>
+      	</div>
+      	<div id="town2city" class="underline" style="width:10em">&nbsp;{{town2City}}</div>
+      	<div id="town2weather" class="underline">&nbsp;{{town2Weather}}</div>
+      </div>
+      <div style="float:left; width:100%">
+      	<div class="headerText" style="width:10em">
+      		<span><input id="town3" type="text" ng-model="town3m" ng-change="town(3)"></span>
+      	</div>
+      	<div id="town3city" class="underline" style="width:10em">&nbsp;{{town3City}}</div>
+      	<div id="town3weather" class="underline">&nbsp;{{town3Weather}}</div>
+      </div>
+      <div style="float:left; width:100%">
+      	<div class="headerText" style="width:10em">
+      		<span><input id="town44" type="text" ng-model="town4m" ng-change="town(4)"></span>
+      	</div>
+      	<div id="town4city" class="underline" style="width:10em">&nbsp;{{town4City}}</div>
+      	<div id="town4weather" class="underline">&nbsp;{{town4Weather}}</div>
+      </div>
+  	</div>
+</div>
