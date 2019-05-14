@@ -22,7 +22,7 @@
         }
         request({
       		method: 'GET',
-              url: appUrl + '/api/v1/getWeather?&q=Hamilton'
+              url: appUrl + '&q=Hamilton,nz'
           }, function(err, resp, body) {
           	if(err) {
           		assert.fail('Failed to get the response');
@@ -60,14 +60,14 @@
         }
         request({
       		method: 'GET',
-              url: appUrl + '/api/v1/getWeather?&q=Auckland'
+              url: appUrl + '&q=Auckland,nz'
           }, function(err, resp, body) {
           	if(err) {
           		assert.fail('Failed to get the response');
           	} else {
               assert.equal(resp.statusCode, 200);
               var pbody = JSON.parse(body);
-              assert(pbody.city === 'Hamilton', "City name does not match");
+              assert(pbody.city === 'Auckland', "City name does not match");
               done();
             }
         });
