@@ -18,7 +18,7 @@
         });
 
     	it('with valid town code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?q=Hamilton')
+    		rqst(app).get('/api/v1/getWeather?town=Hamilton')
     		.end(function(err, res) {
                     assert.equal(res.status, 200);
                     assert.equal(res.body.city, 'Hamilton');
@@ -35,7 +35,7 @@
     	});
 
     	it('with invalid town code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?q=00000')
+    		rqst(app).get('/api/v1/getWeather?town=Hamsdftf')
     		.end(function(err, res) {
                     assert.equal(res.status, 400);
                     done();
@@ -43,7 +43,7 @@
     	});
 
     	it('with incomplete town code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?q=Ham')
+    		rqst(app).get('/api/v1/getWeather?town=Hamilt')
     		.end(function(err, res) {
                     assert.equal(res.status, 400);
                     done();

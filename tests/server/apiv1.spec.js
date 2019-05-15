@@ -44,7 +44,7 @@
     it('with valid town code and error from request call', function() {
       reqMock = {
         query: {
-          town: 79968
+          town: Hamilton
         }
       };
 
@@ -63,7 +63,7 @@
     it('with incomplete town code', function() {
       reqMock = {
         query: {
-          town: 79968
+          town: Hamilt
         }
       };
 
@@ -82,20 +82,20 @@
     it('with valid town code', function() {
       reqMock = {
         query: {
-          town: 79968
+          town: Hamilton
         }
       };
 
       var body = {
         cod: 200,
-        name: 'El Paso',
+        name: 'Hamilton',
         weather: [
           {
             main: 'cold'
           }
         ],
         main: {
-          temp: 78
+          temp: 2
         }
       };
 
@@ -108,8 +108,8 @@
       apiv1.getWeather(reqMock, resMock);
 
       assert(resMock.status.lastCall.calledWith(200), 'Unexpected response:' + resMock.status.lastCall.args);
-      assert(resMock.send.lastCall.args[0].city === 'El Paso', 'Unexpected response:' + resMock.send.lastCall.args[0].city);
-      assert(resMock.send.lastCall.args[0].weather === 'Conditions are cold and temperature is 78 C', 'Unexpected response:' + resMock.send.lastCall.args[0].weather);
+      assert(resMock.send.lastCall.args[0].city === 'Hamilton', 'Unexpected response:' + resMock.send.lastCall.args[0].city);
+      assert(resMock.send.lastCall.args[0].weather === 'Conditions are cold and temperature is 2 C', 'Unexpected response:' + resMock.send.lastCall.args[0].weather);
     });
   });
 
@@ -131,7 +131,7 @@
     it('with valid town code and error from request call', function() {
       reqMock = {
         query: {
-          town: 79968
+          town: Hamilton
         }
       };
 
@@ -150,7 +150,7 @@
     it('with incomplete town code', function() {
       reqMock = {
         query: {
-          town: 79968
+          town: Hamilt
         }
       };
 
@@ -169,20 +169,20 @@
     it('with valid town code', function() {
       reqMock = {
         query: {
-          town: 79968
+          town: Hamilton
         }
       };
 
       var body = {
         cod: 200,
-        name: 'El Paso',
+        name: 'Hamilton',
         weather: [
           {
             main: 'cold'
           }
         ],
         main: {
-          temp: 78
+          temp: 2
         }
       };
 
@@ -195,8 +195,8 @@
       apiv1.getWeather2(reqMock, resMock);
 
       assert(resMock.status.lastCall.calledWith(200), 'Unexpected response:' + resMock.status.lastCall.args);
-      assert(resMock.send.lastCall.args[0].city === 'El Paso', 'Unexpected response:' + resMock.send.lastCall.args[0].city);
-      assert(resMock.send.lastCall.args[0].weather === 'Conditions are cold and temperature is 78 C', 'Unexpected response:' + resMock.send.lastCall.args[0].weather);
+      assert(resMock.send.lastCall.args[0].city === 'Hamilton', 'Unexpected response:' + resMock.send.lastCall.args[0].city);
+      assert(resMock.send.lastCall.args[0].weather === 'Conditions are cold and temperature is 2 C', 'Unexpected response:' + resMock.send.lastCall.args[0].weather);
     });
   });
   
