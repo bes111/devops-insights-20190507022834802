@@ -44,7 +44,7 @@
     it('with valid town code and error from request call', function() {
       reqMock = {
         query: {
-          town: Hamilton
+          town: 'Hamilton'
         }
       };
 
@@ -63,7 +63,7 @@
     it('with incomplete town code', function() {
       reqMock = {
         query: {
-          town: Hamilt
+          town: 'Hamilt'
         }
       };
 
@@ -82,7 +82,7 @@
     it('with valid town code', function() {
       reqMock = {
         query: {
-          town: Hamilton
+          town: 'Hamilton'
         }
       };
 
@@ -131,7 +131,7 @@
     it('with valid town code and error from request call', function() {
       reqMock = {
         query: {
-          town: Hamilton
+          town: 'Hamilton'
         }
       };
 
@@ -150,7 +150,7 @@
     it('with incomplete town code', function() {
       reqMock = {
         query: {
-          town: Hamilt
+          town: 'Hamilt'
         }
       };
 
@@ -169,7 +169,7 @@
     it('with valid town code', function() {
       reqMock = {
         query: {
-          town: Hamilton
+          town: 'Hamilton'
         }
       };
 
