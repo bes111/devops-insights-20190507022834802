@@ -25,10 +25,19 @@
   			// The location of New Zealand
   			var nz = {lat: -41.838, lng: 171.779};
   			// The map, centered at New Zealand
+  			var Auc = {lat: -36.866, lng: 174.766};
+  			var Ham = {lat: -37.783, lng: 175.283};
+  			var Wel = {lat: -41.286, lng: 174.775};
+  			var Chr = {lat: -43.533, lng: 172.633};
+  			var Dun = {lat: -45.874, lng: 170.503};
   			var map = new google.maps.Map(
 	        document.getElementById('map'), {zoom: 4, center: nz});
 			  // The marker, positioned at New Zealand
-		    var marker = new google.maps.Marker({position: nz, map: map});
+		    var Aucmarker = new google.maps.Marker({position: Auc, map: map});
+		    var Hammarker = new google.maps.Marker({position: Ham, map: map});
+		    var Welmarker = new google.maps.Marker({position: Wel, map: map});
+		    var Chrmarker = new google.maps.Marker({position: Chr, map: map});
+		    var Dunmarker = new google.maps.Marker({position: Dun, map: map});
 }
     	</script>
     	<script async defer
