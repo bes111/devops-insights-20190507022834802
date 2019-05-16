@@ -12,11 +12,21 @@ ConsoleModule.config(['$routeProvider', '$locationProvider','$sceDelegateProvide
 
 ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$timeout', '$sce',
     function($scope, $http, $routeParams, $timeout, $sce) {
-
+    
+	/*
+	var ibmdb = require("../") //require("ibm_db")
+  	, conn = new ibmdb.Database()
+  	, cn = "database=BLUDB;hostname=dashdb-txn-sbox-yp-dal09-04.services.dal.bluemix.net;port=50001;uid=kjs22259;pwd=8^znzknkt021srgl"
+  	;
+  	// open a connection to the database
+	conn.openSync(cn);
+	var initial1 = "";
+	initial1 = conn.querySync("SELECT ");
+	*/
+	
     $scope.somemessage = "Some weather";
     $scope.town1City = "";
     $scope.town1Weather = "";
-	$scope.town2m = "Hamilton";
     $scope.town = function(which) {
 
         var data = "";
